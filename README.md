@@ -1,1 +1,1 @@
-readme file
+simple example of the readme file
