@@ -1,0 +1,29 @@
+mysql> USE rental
+Database changed
+
+mysql> CREATE TABLE `dvd`
+    -> (
+    -> dvd_id SERIAL,
+    -> title VARCHAR(255) DEFAULT '',
+    -> production_year YEAR(4)
+    -> );
+Query OK, 0 rows affected (0,30 sec)
+
+mysql> SHOW TABLES;
++------------------+
+| Tables_in_rental |
++------------------+
+| dvd              |
++------------------+
+1 row in set (0,00 sec)
+
+mysql> describe dvd;
++-----------------+---------------------+------+-----+---------+----------------+
+| Field           | Type                | Null | Key | Default | Extra          |
++-----------------+---------------------+------+-----+---------+----------------+
+| dvd_id          | bigint(20) unsigned | NO   | PRI | NULL    | auto_increment |
+| title           | varchar(255)        | YES  |     |         |                |
+| production_year | year(4)             | YES  |     | NULL    |                |
++-----------------+---------------------+------+-----+---------+----------------+
+3 rows in set (0,00 sec)
+
