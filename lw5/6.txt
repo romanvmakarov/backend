@@ -1,0 +1,13 @@
+mysql> SELECT customer.first_name, customer.last_name, dvd.title FROM offer INNER JOIN dvd ON dvd.dvd_id=offer.dvd_id INNER JOIN customer ON customer.customer_id=offer.customer_id WHERE MONTH(offer.offer_date)=YEAR(NOW());
+Empty set (0,00 sec)
+
+
+mysql> SELECT customer.first_name, customer.last_name, dvd.title FROM offer INNER JOIN dvd ON dvd.dvd_id=offer.dvd_id INNER JOIN customer ON customer.customer_id=offer.customer_id WHERE MONTH(offer.offer_date)=MONTH(NOW());
++------------+-----------+--------------+
+| first_name | last_name | title        |
++------------+-----------+--------------+
+| Petr       | Petrov    | examplename1 |
+| Petr       | Petrov    | examplename2 |
++------------+-----------+--------------+
+2 rows in set (0,00 sec)
+
