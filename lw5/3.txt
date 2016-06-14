@@ -1,0 +1,21 @@
+mysql> INSERT INTO dvd(title, production_year) VALUES
+    -> ('examplename1','2001'),
+    -> ('examplename2','2016'),
+    -> ('examplename3','2002'),
+    -> ('examplename4','2015');
+Query OK, 4 rows affected (0,10 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM dvd;
++--------+--------------+-----------------+
+| dvd_id | title        | production_year |
++--------+--------------+-----------------+
+|      1 | examplename1 |            2001 |
+|      2 | examplename2 |            2016 |
+|      3 | examplename3 |            2002 |
+|      4 | examplename4 |            2015 |
++--------+--------------+-----------------+
+4 rows in set (0,00 sec)
+
+
+
