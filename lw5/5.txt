@@ -1,0 +1,2 @@
+mysql> SELECT * FROM dvd INNER JOIN offer ON dvd.dvd_id = offer.dvd_id WHERE offer.return_date > NOW();
+Empty set (0,05 sec)
