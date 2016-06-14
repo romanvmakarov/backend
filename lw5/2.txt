@@ -61,4 +61,28 @@ mysql> DESCRIBE customer;
 5 rows in set (0,00 sec)
 
 
+mysql> CREATE TABLE `offer`
+    -> (
+    -> offer_id SERIAL,
+    -> dvd_id BIGINT UNSIGNED,
+    -> customer_id BIGINT UNSIGNED,
+    -> offer_date DATE,
+    -> return_date DATE,
+    -> FOREIGN KEY (dvd_id) REFERENCES dvd(dvd_id),
+    -> FOREIGN KEY (customer_id) REFERENCES customer(customer_id)
+    -> );
+Query OK, 0 rows affected (0,42 sec)
+
+mysql> describe offer;
++-------------+---------------------+------+-----+---------+----------------+
+| Field       | Type                | Null | Key | Default | Extra          |
++-------------+---------------------+------+-----+---------+----------------+
+| offer_id    | bigint(20) unsigned | NO   | PRI | NULL    | auto_increment |
+| dvd_id      | bigint(20) unsigned | YES  | MUL | NULL    |                |
+| customer_id | bigint(20) unsigned | YES  | MUL | NULL    |                |
+| offer_date  | date                | YES  |     | NULL    |                |
+| return_date | date                | YES  |     | NULL    |                |
++-------------+---------------------+------+-----+---------+----------------+
+5 rows in set (0,00 sec)
+
 
