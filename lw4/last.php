@@ -1,5 +1,5 @@
 <?php
-  require_once('include/common.inc.php');
+  require_once('inc/common.inc.php');
   if (isset($_GET['str']))
   {
     $str = $_GET['str'];
